@@ -1,0 +1,44 @@
+/*.section-portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}*/
+/*.section-portfolio__list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 50px;
+  margin-top: 0;
+  list-style: none;
+}
+.section-portfolio__item {
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+}*/
+
+.section-portfolio__button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  cursor: pointer;
+  padding: 6px 22px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: getColor("bgc-section");
+  border: none;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: getColor("accent-color");
+    background-color: getColor("sub-accent");
+    box-shadow: 0px 3px 1px getColor("modal-btn"),
+      0px 1px 2px getColor("shadow"), 0px 2px 2px getColor("focus");
+  }
+}

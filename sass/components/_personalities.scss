@@ -1,0 +1,66 @@
+.personalities-list {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media screen and(min-width:768px) and(max-width:1199px) {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media screen and(min-width:1200px) {
+      & {
+        display: flex;
+
+        padding-left: 0;
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+.personalities-list__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 1.7;
+  text-align: start;
+  color: getColor("text-color");
+}
+.personalities-list__text--margin {
+  margin-bottom: 0;
+}
+.personalities-list__subtitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.personalities-list__container {
+  background-color: getColor("bgc-section");
+  margin-bottom: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.personalities-list__item {
+  width: 450px;
+  @media screen and(min-width:768px) {
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    & {
+      width: 354px;
+    }
+  }
+
+  @media screen and(min-width:1200px) {
+    width: 270px;
+  }
+}

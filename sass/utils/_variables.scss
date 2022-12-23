@@ -1,0 +1,26 @@
+$colors: (
+  "brand-color": #212121,
+  "text-color": #757575,
+  "accent-color": #ffffff,
+  "sub-accent": #2196f3,
+  "hover-accent": #188ce8,
+  "bgc": #2f303a,
+  "bgc-section": #f5f4fa,
+  "logo": #000000,
+  "line": #ececec,
+  "border": #eeeeee,
+  "focus": rgba(0, 0, 0, 0.12),
+  "color-focus": rgba(0, 0, 0, 0.14),
+  "sub-focus": rgba(0, 0, 0, 0.2),
+  "mail-style": rgba(255, 255, 255, 0.6),
+  "bgc-customers": #f5f5f5,
+  "border-btn": #afb1b8,
+  "modal-btn": rgba(0, 0, 0, 0.1),
+  "hover-shadow": rgba(0, 0, 0, 0.06),
+  "hover-shadow1": rgba(0, 0, 0, 0.16),
+  "examples-rgba": rgba(33, 150, 243, 0.9),
+  "shadow": rgba(0, 0, 0, 0.08),
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

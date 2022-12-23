@@ -1,0 +1,40 @@
+.customers {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+.customers__title {
+  font-weight: 700;
+  margin: 0 0 50px 0;
+  text-align: center;
+  font-size: 36px;
+  color: getColor("brand-color");
+  line-height: 1.16;
+}
+.customers__link {
+  padding: 0;
+  margin: 0;
+  width: 170px;
+  height: 92px;
+  background-color: getColor("accent-color");
+  border: 1px solid getColor("border-btn");
+  border-radius: 4px;
+  color: getColor("border-btn");
+  transition-property: border-color, fill, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: getColor("sub-accent");
+    border-color: getColor("sub-accent");
+  }
+}
+.customers__icon {
+  display: flex;
+  fill: currentColor;
+  margin: 0;
+}
+.customers__item:not(:last-child) {
+  margin-right: 30px;
+}

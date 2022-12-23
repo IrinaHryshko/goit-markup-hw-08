@@ -1,0 +1,32 @@
+.icon-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.icon-list__actually {
+  fill: currentColor;
+}
+.icon-list__link {
+  @include bgc(getColor("accent-color"));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: getColor("border-btn");
+
+  transition-property: color, fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: getColor("sub-accent");
+    color: getColor("accent-color");
+  }
+}
+.icon-list__item:not(:last-child) {
+  margin-right: 10px;
+}
