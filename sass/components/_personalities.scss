@@ -7,24 +7,20 @@
       display: flex;
       flex-wrap: wrap;
     }
+  }
+  @media screen and(min-width:1200px) {
+    & {
+      display: flex;
 
-    @media screen and(min-width:1200px) {
-      & {
-        display: flex;
-
-        padding-left: 0;
-        margin-right: 30px;
-
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
+      padding-left: 0;
+      margin-right: 30px;
     }
   }
 }
 .personalities-list__text {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0;
+
   line-height: 1.7;
   text-align: start;
   color: getColor("text-color");
@@ -42,6 +38,7 @@
 }
 
 .personalities-list__container {
+  height: 120px;
   background-color: getColor("bgc-section");
   margin-bottom: 30px;
   border-radius: 4px;
@@ -52,15 +49,34 @@
 .personalities-list__item {
   width: 450px;
   @media screen and(min-width:768px) {
-    &:nth-child(2n + 1) {
-      margin-right: 30px;
-    }
     & {
       width: 354px;
     }
   }
-
   @media screen and(min-width:1200px) {
     width: 270px;
+  }
+
+  @media screen and(min-width:768px) {
+    &:nth-child(1) {
+      margin-bottom: 30px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 30px;
+    }
+    &:nth-child(2n + 1) {
+      padding-left: 0;
+      margin-right: 30px;
+    }
+  }
+  @media screen and(min-width:1200px) {
+    & {
+      padding-left: 0;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
   }
 }

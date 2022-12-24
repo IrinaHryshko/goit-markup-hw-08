@@ -1,13 +1,23 @@
 .footer-page {
   padding: 60px 0;
+  margin-right: auto;
+  margin-left: auto;
   background-color: getColor("bgc");
 }
+.footer-page__maps {
+  text-align: center;
+}
 .footer-page__margin {
-  margin-top: 9px;
+  @media screen and(min-width:1200px) {
+    margin-top: 9px;
+  }
+  margin-top: 8px;
+  text-align: center;
 }
 .footer-page__link {
   display: inline-block;
   text-decoration: none;
+
   padding: 0;
   margin: 0;
   font-style: normal;
@@ -24,9 +34,28 @@
 }
 
 .footer-page__address {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 0 60px 0;
 }
+@media screen and(min-width:1200px) {
+  .footer-page__base-container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.footer-page__flex {
+  @media screen and(min-width:768px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.footer-page__distance {
+  @media screen and(min-width:768px) {
+    margin-right: 70px;
+  }
+}
+
 /*.footer-page__base-container {
   display: flex;
   align-items: baseline;
