@@ -1,28 +1,23 @@
 .header {
   position: relative;
-  height: 80px;
 
   border-bottom: 1px solid getColor("line");
 }
 .nav-site {
-  & {
-    display: flex;
-    line-height: 1.14;
-    font-size: 14px;
-  }
+  display: flex;
+  line-height: 1.14;
+
+  font-size: 14px;
+
   @media screen and (min-width: 768px) {
     & {
-      margin-top: 32px;
-      margin-bottom: 32px;
+      margin: 0;
+      align-items: center;
     }
   }
 }
 .header__flex {
   @media screen and (min-width: 768px) {
-    display: flex;
-
-    align-items: center;
-
     & a {
       display: flex;
     }
@@ -39,7 +34,7 @@
   line-height: 1.17;
   font-size: 40px;
 
-  @media screen and(min-width:1200px) {
+  @media screen and(min-width:768px) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -62,7 +57,7 @@
   &:focus {
     color: getColor("sub-accent");
   }
-  @media screen and(min-width:1200px) {
+  @media screen and(min-width:768px) {
     &--active::after {
       content: "";
       position: absolute;
@@ -113,17 +108,18 @@
   }
 }
 .nav-site__list {
-  margin-top: 48px;
+  padding-top: 0px;
+  margin-top: 0;
   margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
   @media screen and(min-width:768px) {
-    & {
-      display: flex;
-      margin-top: 0;
-    }
+    display: flex;
+    margin-top: 0;
+    margin-left: 87px;
+    margin-right: 96px;
   }
   @media screen and(min-width:1200px) {
+    margin-right: 315px;
+    margin-left: 92px;
     &:last-child {
       margin-right: 0px;
     }
@@ -143,51 +139,53 @@
   background-color: transparent;
   border: none;
   z-index: 1;
+
   &:hover,
   &:focus {
     fill: getColor("sub-accent");
   }
 }
-.header__menu .header__icon-menu {
+.header__menu .header__close {
   display: none;
-}
-.header__menu.is-open .header__icon-menu {
-  display: block;
 }
 .header__menu.is-open .header__close {
+  display: block;
+}
+.header__menu.is-open .header__icon-menu {
   display: none;
 }
-.header__menu .header__close {
+.header__menu .header__icon-menu {
   display: block;
 }
 
 .header__menu-container {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-left: 40px;
+  @media screen and(max-width:767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
-  background-color: getColor("accent-color");
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    background-color: getColor("accent-color");
 
-  &.is-open {
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    padding-left: 40px;
-    margin: 0;
-    transform: translateX(0);
+    &.is-open {
+      display: flex;
+      position: absolute;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      padding-left: 40px;
+      margin: 0;
+      transform: translateX(0);
+    }
   }
 
   @media screen and(min-width:768px) {
     & {
       display: flex;
-      transform: translateX(0);
+      align-items: center;
       padding: 0;
       margin: 0;
     }
@@ -209,7 +207,7 @@
 
   margin: 0;
   align-items: flex-start;
-  margin-bottom: 48px;
+  margin-bottom: 0px;
   margin-right: 0;
   margin-left: 0;
 }

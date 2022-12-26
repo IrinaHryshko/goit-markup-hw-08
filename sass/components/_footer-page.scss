@@ -8,11 +8,12 @@
   text-align: center;
 }
 .footer-page__margin {
-  @media screen and(min-width:1200px) {
-    margin-top: 9px;
-  }
   margin-top: 8px;
   text-align: center;
+  @media screen and(min-width:1200px) {
+    margin-top: 9px;
+    text-align: left;
+  }
 }
 .footer-page__link {
   display: inline-block;
@@ -51,7 +52,7 @@
   }
 }
 .footer-page__distance {
-  @media screen and(min-width:768px) {
+  @media screen and(min-width:1200px) {
     margin-right: 70px;
   }
 }

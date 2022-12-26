@@ -1,9 +1,12 @@
-/*.section-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}*/
-/*.section-portfolio__list {
+@media screen and(min-width:1200px) {
+  .section-portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.section-portfolio__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 0;
   padding-top: 0;
@@ -13,12 +16,13 @@
 }
 .section-portfolio__item {
   margin-right: 8px;
+  display: flex;
+  flex-wrap: wrap;
   &:last-child {
     margin-right: 0;
   }
-}*/
-
-.section-portfolio__button {
+}
+*/ .section-portfolio__button {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;

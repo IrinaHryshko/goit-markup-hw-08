@@ -112,8 +112,9 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   z-index: 1;
-  min-width: 528px;
-  min-height: 581px;
+
+  min-width: 450px;
+  min-height: 609px;
   background-color: getColor("accent-color");
   box-shadow: 0px 1px 3px getColor("focus"), 0px 1px 1px getColor("color-focus"),
     0px 2px 1px getColor("sub-focus");
@@ -121,6 +122,10 @@
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and(min-width:1200px) {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 .modal__close {
   position: absolute;
@@ -153,10 +158,13 @@
   & p {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     margin: 0;
     padding: 0;
+    @media screen and(min-width:1200px) {
+      line-height: 1.15;
+    }
   }
 }
 
@@ -174,8 +182,11 @@
   margin-top: 20px;
   color: getColor("text-color");
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.7;
+  @media screen and(min-width:1200px) {
+    font-size: 14px;
+  }
 }
 .modal__input {
   display: block;
@@ -184,7 +195,7 @@
   border-radius: 4px;
   margin: 0;
   padding: 0;
-  min-width: 448px;
+  min-width: 370px;
   min-height: 40px;
   padding-left: 42px;
   transition-property: border, fill;
@@ -194,6 +205,9 @@
   &:focus {
     cursor: pointer;
     border: 1px solid getColor("sub-accent");
+  }
+  @media screen and(min-width:1200px) {
+    min-width: 448px;
   }
 }
 
@@ -222,11 +236,14 @@
   padding: 12px 16px;
 
   resize: none;
-  min-width: 448px;
+  min-width: 370px;
   min-height: 120px;
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and(min-width:1200px) {
+    min-width: 448px;
+  }
 
   textarea &::placeholder {
     position: absolute;

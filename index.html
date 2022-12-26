@@ -18,14 +18,14 @@
    
     <header class="header">
       <div class="base-container header__flex">
-        
-       <div><a href="index.html" class="logo"
+      <nav class="nav-site">
+         <div><a href="index.html" class="logo"
             ><span class="logo__base">Web</span>Studio</a
           ></div>
-       <button type="button" class="header__menu is-open"  aria-expanded="true" data-menu-button><svg aria-label="Перемикач мобільного меню" width="40px" height="40px"><use class="header__close" href="./images/sprite.svg#icon-menu_40px-min"></use><use class="header__icon-menu" href="./images/sprite.svg#icon-close_40px-min"></use></svg></button> 
+        <button type="button" class="header__menu is-open"  aria-expanded="true" data-menu-button><svg aria-label="Перемикач мобільного меню" width="40px" height="40px"><use class="header__close" href="./images/sprite.svg#icon-menu_40px-min"></use><use class="header__icon-menu" href="./images/sprite.svg#icon-close_40px-min"></use></svg></button> 
         <div class="header__menu-container " data-menu>
-        <nav class="nav-site">
-         
+          
+
           <ul class="nav-site__list">
               <li class="nav-site__item">
                 <a href="index.html" class="nav-site__link nav-site__link--active">Студія</a>
@@ -35,9 +35,9 @@
               </li>
               <li class="nav-site__item"><a href="" class="nav-site__link ">Контакти</a></li>
           </ul>
-        </nav>
-      <div>
-        <ul class="address">
+        
+        
+         <ul class="address">
             <li class="address__contacts">
               
               <a href="mailto:info@devstudio.com" class="address__list "
@@ -59,9 +59,13 @@
           <li class="header__soc-link"><a href="#">LinkedIn</a></li>
   
          </ul>
-       </div>
-       </div>
-      </div>
+         
+        
+      
+       
+        </div>
+      </nav>
+    </div>
     </header>
   
     <!--Перший блок,герой-->
@@ -192,15 +196,17 @@
           <ul class="our-team__list">
             <li class="our-team__item">
               <picture>
-                <source srcset="./images/desc-our-team1-1x.jpg 1x,
-                ./images/desc-our-team1-2x.jpg 2x"
-                media="(min-width:1200px)">
-                <source srcset="./images/tablet-our-team1-1x.jpg 1x,
-                ./images/tablet-our-team1@2x.jpg 2x"
-                media="(min-width:768px)">
+             
                 <source srcset="./images/mobile-our-team1@1x.jpg 1x,
                 ./images/mobile-our-team1@2x.jpg 2x"
-                media="(min-width:480px)">
+                media="(max-width:767px)">
+               
+                   <source srcset="./images/tablet-our-team1-1x.jpg 1x,
+                ./images/tablet-our-team1@2x.jpg 2x"
+                media="(max-width:1199px)">
+                  <source srcset="./images/desc-our-team1-1x.jpg 1x,
+                ./images/desc-our-team1-2x.jpg 2x"
+                media="(min-width:1200px)">
               <img src="images/desc-our-team1-1x.jpg" alt="Photo-1" width="270" class="our-team__photo"  />
               </picture>
               <div class="our-team__container">
@@ -220,15 +226,16 @@
             </li>
             <li class="our-team__item">
                 <picture>
-                <source srcset="./images/desc-our-team2-1x.jpg 1x,
-                ./images/desc-our-team2-2x.jpg 2x"
-                media="(min-width:1200px)">
+              <source srcset="./images/mobile-our-team2@1x.jpg 1x,
+                ./images/mobile-our-team2@2x.jpg 2x"
+                media="(max-width:767px)">
                 <source srcset="./images/tablet-our-team2-1x.jpg 1x,
                 ./images/tablet-our-team2@2x.jpg 2x"
-                media="(min-width:768px)">
-                <source srcset="./images/mobile-our-team2@1x.jpg 1x,
-                ./images/mobile-our-team2@2x.jpg 2x"
-                media="(min-width:480px)">
+                media="(max-width:1199px)">
+               
+                   <source srcset="./images/desc-our-team2-1x.jpg 1x,
+                ./images/desc-our-team2-2x.jpg 2x"
+                media="(min-width:1200px)">
               <img src="images/desc-our-team2-1x.jpg" alt="Photo-1"  class="our-team__photo"  />
               </picture>
                 <div class="our-team__container">
@@ -247,15 +254,16 @@
             </li>
             <li class="our-team__item">
                 <picture>
-                <source srcset="./images/desc-our-team3-1x.jpg 1x,
-                ./images/desc-our-team3-2x.jpg 2x"
-                media="(min-width:1200px)">
+                 <source srcset="./images/mobile-our-team3@1x.jpg 1x,
+                ./images/mobile-our-team3@2x.jpg 2x"
+                media="(max-width:767px)">
                 <source srcset="./images/tablet-our-team3-1x.jpg 1x,
                 ./images/tablet-our-team3@2x.jpg 2x"
-                media="(min-width:768px)">
-                <source srcset="./images/mobile-our-team3@1x.jpg 1x,
-                ./images/mobile-our-team3@2x.jpg 2x"
-                media="(min-width:480px)">
+                media="(max-width:1199px)">
+              
+                 <source srcset="./images/desc-our-team3-1x.jpg 1x,
+                ./images/desc-our-team3-2x.jpg 2x"
+                media="(min-width:1200px)">
               <img src="images/desc-our-team3-1x.jpg" alt="Photo-1" width="270" class="our-team__photo"  />
               </picture>
               <div class="our-team__container">
@@ -274,15 +282,18 @@
             </li>
             <li class="our-team__item">
                  <picture>
+               
+               
+                <source srcset="./images/mobile-our-team4@1x.jpg 1x,
+                ./images/mobile-our-team4@2x.jpg 2x"
+                media="(miax-width:767px)">
+                 
+                 <source srcset="./images/tablet-our-team4-1x.jpg 1x,
+                ./images/tablet-our-team4@2x.jpg 2x"
+                media="(max-width:1199px)">
                 <source srcset="./images/desc-our-team4-1x.jpg 1x,
                 ./images/desc-our-team4-2x.jpg 2x"
                 media="(min-width:1200px)">
-                <source srcset="./images/tablet-our-team4-1x.jpg 1x,
-                ./images/tablet-our-team4@2x.jpg 2x"
-                media="(min-width:768px)">
-                <source srcset="./images/mobile-our-team4@1x.jpg 1x,
-                ./images/mobile-our-team4@2x.jpg 2x"
-                media="(min-width:480px)">
               <img src="images/desc-our-team4-1x.jpg" alt="Photo-1" width="270" class="our-team__photo"  />
               </picture>
             <div class="our-team__container">
@@ -346,7 +357,7 @@
           </ul>
          
         </address>
-        </div>
+      </div>
        
        <div class="icon-footer">
           <p class="icon-footer__title">Приєднуйтесь</p>

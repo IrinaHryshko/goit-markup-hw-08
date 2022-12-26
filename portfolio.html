@@ -14,39 +14,56 @@
     <title>Портфоліо</title>
   </head>
   <body>
-    <header class="header">
+     <header class="header">
       <div class="base-container header__flex">
-        <nav class="nav-site">
-          <a href="index.html" class="logo"
+      <nav class="nav-site">
+         <div><a href="index.html" class="logo"
             ><span class="logo__base">Web</span>Studio</a
-          >
+          ></div>
+        <button type="button" class="header__menu is-open"  aria-expanded="true" data-menu-button><svg aria-label="Перемикач мобільного меню" width="40px" height="40px"><use class="header__close" href="./images/sprite.svg#icon-menu_40px-min"></use><use class="header__icon-menu" href="./images/sprite.svg#icon-close_40px-min"></use></svg></button> 
+        <div class="header__menu-container " data-menu>
+          
+
           <ul class="nav-site__list">
               <li class="nav-site__item">
-                <a href="index.html" class="nav-site__link" > Студія</a>
+                <a href="index.html" class="nav-site__link ">Студія</a>
               </li>
               <li class="nav-site__item">
-                <a href="./portfolio.html" class="nav-site__link nav-site__link--active"">Портфоліо</a>
+                <a href="./portfolio.html" class="nav-site__link nav-site__link--active">Портфоліо</a>
               </li>
               <li class="nav-site__item"><a href="" class="nav-site__link ">Контакти</a></li>
           </ul>
-        </nav>
-        <ul class="address">
-            <li class="address__contacts">
-              
-              <a href="mailto:info@devstudio.com" class="address__list"
-                ><svg class="address__icon" width="16px" height="12px"> <use href="./images/sprite.svg#icon-envelope" ></use></svg> info@devstudio.com</a
-              >
-              
-            </li>
-            <li class="address__contacts">
-              
-              <a href="tel:+380961111111" class="address__list"
-                ><svg class="address__icon" width="10px" height="16px"> <use href="./images/sprite.svg#icon-smartphone" ></use></svg> +38-096-111-11-11</a
-              >
-            </li>
         
-        </ul>
-      </div>
+        
+         <ul class="address">
+            <li class="address__contacts">
+              
+              <a href="mailto:info@devstudio.com" class="address__list "
+                ><svg class="address__icon envelope" width="16px" height="12px"> <use href="./images/sprite.svg#icon-envelope" ></use></svg> info@devstudio.com</a
+              >
+              
+            </li>
+            <li class="address__contacts">
+              
+              <a href="tel:+380961111111" class="address__list phone"
+                ><svg class="address__icon smartphone" > <use href="./images/sprite.svg#icon-smartphone" ></use></svg> +38-096-111-11-11</a
+              >
+            </li>
+         </ul>
+         <ul class="header__soc-list">
+          <li class="header__soc-link"><a href="#">Instagram</a></li>
+          <li class="header__soc-link"><a href="#">Twitter</a></li>
+          <li class="header__soc-link"><a href="#">Facebook</a></li>
+          <li class="header__soc-link"><a href="#">LinkedIn</a></li>
+  
+         </ul>
+         
+        
+      
+       
+        </div>
+      </nav>
+    </div>
     </header>
     <main>
       <section class="section-portfolio">
@@ -73,12 +90,19 @@
             <li class="examples-list__item">
               <a href="" class="examples-list__link">
                 <div class="examples-list__overlay">
-                  <img
-                    src="./images/1.jpg"
-                    alt="Технокряк"
-                    width="370px"
-                    
-                  />
+                <picture>
+               <source srcset="./images/examples1.jpg 450w,
+                ./images/examples1@2x.jpg 900w"
+                media="(max-width:767px)" width="450px">
+                <source srcset="./images/examples-tabl1-1x.jpg 354w,
+                ./images/examples-tabl1-2x.jpg 708w"
+                media="(max-width:1199px)" width="354px">
+                
+                 <source srcset="./images/examples-desc1-1x.jpg 370w,
+                ./images/examples-desc1-2x.jpg 740w"
+                media="(min-width:1200px)"  width="370px">
+              <img src=./images/examples-desc1-1x.jpg alt="examples"   />
+              </picture>
 
                   <div class="examples-list__text">
                     <p>
@@ -98,12 +122,19 @@
             <li class="examples-list__item">
               <a href="" class="examples-list__link">
                 <div class="examples-list__overlay">
-                  <img
-                    src="./images/2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370px"
-                    
-                  />
+                   <picture>
+                <source srcset="./images/examples-desc2-1x.jpg 370w,
+                ./images/examples-desc2-2x.jpg 740w"
+                media="(min-width:1200px)" >
+                <source srcset="./images/examples-tabl2-1x.jpg 354w,
+                ./images/examples-tabl2-2x.jpg 708w"
+                media="(min-width:768px)">
+                <source srcset="./images/examples2.jpg 450w,
+                ./images/examples2@2x.jpg 900w"
+                media="(min-width:480px)">
+              <img src=./images/examples-desc2-1x.jpg   alt="Постер New Orlean vs Golden Star"/>
+              </picture>
+                  
 
                   <div class="examples-list__text">
                     <p>
@@ -116,19 +147,26 @@
                 </div>
                 <div class="examples-list__border"">
                   <h2 class="examples-list__title">Постер New Orlean vs Golden Star</h2>
-                  <p class="examples-list__name" examples-list__>Дизайн</p>
+                  <p class="examples-list__name">Дизайн</p>
                 </div>
               </a>
             </li>
             <li class="examples-list__item">
               <a href="" class="examples-list__link">
                 <div class="examples-list__overlay">
-                  <img
-                    src="./images/3.jpg"
-                    alt="Ресторан Seafood"
-                    width="370px"
-                   
-                  />
+                     <picture>
+                <source srcset="./images/examples-desc3-1x.jpg 370w,
+                ./images/examples-desc3-2x.jpg 740w"
+                media="(min-width:1200px)">
+                <source srcset="./images/examples-tabl3-1x.jpg 354w,
+                ./images/examples-tabl3-2x.jpg 708w"
+                media="(min-width:768px)">
+                <source srcset="./images/examples3.jpg 450w,
+                ./images/examples3@2x.jpg 900w"
+                media="(min-width:480px)">
+              <img src=./images/examples-desc3-1x.jpg 
+                    alt="Ресторан Seafood"/>
+              </picture>
 
                   <div class="examples-list__text">
                     <p>
@@ -148,13 +186,20 @@
             <li class="examples-list__item">
               <a href="" class="examples-list__link">
                 <div class="examples-list__overlay">
-                  <img
-                    src="./images/4.jpg"
-                    alt="Проєкт Prime"
-                    width="370px"
-                    
-                  />
-
+                       <picture>
+                <source srcset="./images/examples-desc4-1x.jpg 370w,
+                ./images/examples-desc4-2x.jpg 740w"
+                media="(min-width:1200px)">
+                <source srcset="./images/examples-tabl4-1x.jpg 354w,
+                ./images/examples-tabl4-2x.jpg 708w"
+                media="(min-width:768px)">
+                <source srcset="./images/examples4.jpg 450w,
+                ./images/examples4@2x.jpg 900w"
+                media="(min-width:480px)">
+              <img src=./images/examples-desc4-1x.jpg 
+                    alt="Проєкт Prime"/>
+              </picture>
+                 
                   <div class="examples-list__text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -173,12 +218,20 @@
             <li class="examples-list__item">
               <a href="" class="examples-list__link">
                 <div class="examples-list__overlay">
-                  <img
-                    src="./images/5.jpg"
-                    alt="Проєкт Boxes"
-                    width="370px"
-                    
-                  />
+                       <picture>
+                <source srcset="./images/examples-desc5-1x.jpg 370w,
+                ./images/examples-desc5-2x.jpg 740w"
+                media="(min-width:1200px)">
+                <source srcset="./images/examples-tabl5-1x.jpg 354w,
+                ./images/examples-tabl5-2x.jpg 708w"
+                media="(min-width:768px)">
+                <source srcset="./images/examples5.jpg 450w,
+                ./images/examples5@2x.jpg 900w"
+                media="(min-width:480px)">
+              <img src=./images/examples-desc5-1x.jpg 
+                    alt="Проєкт Boxes"/>
+              </picture>
+                 
 
                   <div class="examples-list__text">
                     <p>
@@ -198,12 +251,20 @@
             <li class="examples-list__item">
               <a href="" class="examples-list__link">
                 <div class="examples-list__overlay">
-                  <img
-                    src="./images/6.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370px"
-                    
-                  />
+                       <picture>
+                <source srcset="./images/examples-desc6-1x.jpg 370w,
+                ./images/examples-desc6-2x.jpg 740w"
+                media="(min-width:1200px)">
+                <source srcset="./images/examples-tabl6-1x.jpg 354w,
+                ./images/examples-tabl6-2x.jpg 708w"
+                media="(min-width:768px)">
+                <source srcset="./images/examples6.jpg 450w,
+                ./images/examples6@2x.jpg 900w"
+                media="(min-width:480px)">
+              <img src=./images/examples-desc6-1x.jpg 
+                    alt="Inspiration has no Borders"/>
+              </picture>
+                  
 
                   <div class="examples-list__text">
                     <p>
@@ -223,13 +284,20 @@
             <li class="examples-list__item">
               <a href="" class="examples-list__link">
                 <div class="examples-list__overlay">
-                  <img
-                    src="./images/7.jpg"
-                    alt="Видання Limited Edition"
-                    width="370px"
-                    
-                  />
-
+                     <picture>
+                <source srcset="./images/examples-desc7-1x.jpg 370w,
+                ./images/examples-desc7-2x.jpg 740w"
+                media="(min-width:1200px)" >
+                <source srcset="./images/examples-tabl7-1x.jpg 354w,
+                ./images/examples-tabl7-2x.jpg 708w"
+                media="(min-width:768px)">
+                <source srcset="./images/examples7.jpg 450w,
+                ./images/examples7@2x.jpg 900w"
+                media="(min-width:480px)">
+              <img src=./images/examples-desc7-1x.jpg 
+                    alt="Видання Limited Edition"/>
+              </picture>
+              
                   <div class="examples-list__text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -248,13 +316,19 @@
             <li class="examples-list__item">
               <a href="" class="examples-list__link">
                 <div class="examples-list__overlay">
-                  <img
-                    src="./images/8.jpg"
-                    alt="Проєкт LAB"
-                    width="370px"
-                   
-                  />
-
+                     <picture>
+                <source srcset="./images/examples-desc8-1x.jpg 370w,
+                ./images/examples-desc8-2x.jpg 740w"
+                media="(min-width:1200px)" width="370px">
+                <source srcset="./images/examples-tabl8-1x.jpg 354w,
+                ./images/examples-tabl8-2x.jpg 708w"
+                media="(min-width:768px)">
+                <source srcset="./images/examples8.jpg 450w,
+                ./images/examples8@2x.jpg 900w"
+                media="(min-width:480px)">
+              <img src=./images/examples-desc8-1x.jpg 
+                    alt="Проєкт LAB"/>
+              </picture>
                   <div class="examples-list__text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -273,13 +347,20 @@
             <li class="examples-list__item">
               <a href="" class="examples-list__link">
                 <div class="examples-list__overlay">
-                  <img
-                    src="./images/9.jpg"
-                    alt="Growing Business"
-                    width="370px"
-                  
-                  />
-
+                       <picture>
+                <source srcset="./images/examples-desc9-1x.jpg 370w,
+                ./images/examples-desc9-2x.jpg 740w"
+                media="(min-width:1200px)" width="370px">
+                <source srcset="./images/examples-tabl9-1x.jpg 354w,
+                ./images/examples-tabl9-2x.jpg 708w"
+                media="(min-width:768px)">
+                <source srcset="./images/examples9.jpg 450w,
+                ./images/examples9@2x.jpg 900w"
+                media="(min-width:480px)">
+              <img src=./images/examples-desc9-1x.jpg 
+                     alt="Growing Business"/>
+              </picture>
+              
                   <div class="examples-list__text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -303,8 +384,9 @@
     <footer class="footer-page ">
   
     <div class="base-container footer-page__base-container">
-      <div>
-        <a href="index.html" class="footer-page__logo "
+      <div class="footer-page__flex">
+        <div class="footer-page__distance">
+        <a href="index.html" class="footer-page__logo logo"
           ><span class="logo__base">Web</span>Studio</a
         >
         <address>
@@ -329,8 +411,8 @@
           </ul>
          
         </address>
-     
-       </div>
+      </div>
+       
        <div class="icon-footer">
           <p class="icon-footer__title">Приєднуйтесь</p>
           <ul class="icon-footer__flex">
@@ -343,7 +425,7 @@
             <li class="icon-footer__list"><a href="#"  class="icon-footer__link"><svg class="icon-footer__actually" width="20px" height="20px"> <use href="./images/sprite.svg#icon-linkedin-1"></use></svg></a></li>
           </ul>
        </div>
-    
+    </div>
     <form class="footer-form" >
       <div>
       <label for="subscription" class="footer-form__label">Підпишіться на розсилку</label>

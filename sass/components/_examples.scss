@@ -35,11 +35,6 @@
 .examples-list__overlay {
   position: relative;
   overflow: hidden;
-  & img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
 }
 .examples-list__title {
   margin-top: 0;
