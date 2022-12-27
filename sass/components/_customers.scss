@@ -28,16 +28,7 @@
 
 .customers__link {
   display: flex;
-
-  width: 210px;
-  height: 92px;
-
-  @media screen and(min-width:768px) {
-    width: 226px;
-  }
-  @media screen and(min-width:1200px) {
-    width: 170px;
-  }
+  height: 100%;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -62,6 +53,14 @@
   justify-content: center;
 }
 .customers__item {
+  width: calc((100% - 30px) / 2);
+  height: 92px;
+  @media screen and(min-width:768px) {
+    width: calc((100% - 60px) / 3);
+  }
+  @media screen and(min-width:1200px) {
+    width: calc((100% - 5 * 30px) / 6);
+  }
   &:nth-child(2n + 1) {
     margin-right: 30px;
   }

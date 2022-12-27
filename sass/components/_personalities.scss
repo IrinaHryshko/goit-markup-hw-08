@@ -47,36 +47,35 @@
   justify-content: center;
 }
 .personalities-list__item {
-  width: 450px;
-  @media screen and(min-width:768px) {
-    & {
-      width: 354px;
-    }
-  }
-  @media screen and(min-width:1200px) {
-    width: 270px;
+  width: 100%;
+  @media screen and(min-width:480px) and(max-width:767px) {
+    margin-bottom: 30px;
   }
 
-  @media screen and(min-width:768px) {
+  @media screen and(min-width:768px) and(max-width:1199px) {
+    & {
+      width: calc((100% - 30px) / 2);
+    }
+    &:nth-child(2n + 1) {
+      padding-left: 0;
+      margin-right: 30px;
+    }
     &:nth-child(1) {
       margin-bottom: 30px;
     }
     &:nth-child(2) {
       margin-bottom: 30px;
     }
-    &:nth-child(2n + 1) {
-      padding-left: 0;
-      margin-right: 30px;
-    }
   }
   @media screen and(min-width:1200px) {
+    width: calc((100% - 30px * 3) / 4);
+
+    &:last-child {
+      margin-right: 0px;
+    }
     & {
       padding-left: 0;
       margin-right: 30px;
-
-      &:last-child {
-        margin-right: 0px;
-      }
     }
   }
 }
