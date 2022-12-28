@@ -291,7 +291,7 @@ img {
   padding: 0;
   background-color: transparent;
   border: none;
-  z-index: 11;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .header__menu {
@@ -336,7 +336,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    z-index: 1;
     background-color: #ffffff;
     position: absolute;
     -ms-flex-pack: distribute;
@@ -803,7 +802,7 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  z-index: 1;
+  z-index: 99;
   min-width: 450px;
   min-height: 609px;
   background-color: #ffffff;
@@ -859,6 +858,7 @@ img {
 
 .modal__form {
   padding: 40px;
+  z-index: 99;
 }
 .modal__form p {
   font-weight: 700;
@@ -1642,16 +1642,16 @@ textarea .modal__comment::placeholder {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .personalities-list__item {
     width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+  }
+  .personalities-list__item:nth-child(4) {
+    margin-bottom: 0px;
+  }
+  .personalities-list__item:nth-child(3) {
+    margin-bottom: 0px;
   }
   .personalities-list__item:nth-child(2n+1) {
-    padding-left: 0;
     margin-right: 30px;
-  }
-  .personalities-list__item:nth-child(1) {
-    margin-bottom: 30px;
-  }
-  .personalities-list__item:nth-child(2) {
-    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {

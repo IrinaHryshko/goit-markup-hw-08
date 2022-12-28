@@ -291,7 +291,7 @@ img {
   padding: 0;
   background-color: transparent;
   border: none;
-  z-index: 11;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .header__menu {
@@ -336,7 +336,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    z-index: 1;
     background-color: #ffffff;
     position: absolute;
     -ms-flex-pack: distribute;
