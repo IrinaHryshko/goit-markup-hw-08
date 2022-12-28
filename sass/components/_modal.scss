@@ -133,7 +133,7 @@
 }
 .modal__close {
   position: absolute;
-
+  z-index: 2;
   border: 1px solid getColor("modal-btn");
   border-radius: 50%;
   display: flex;
