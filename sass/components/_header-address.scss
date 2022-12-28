@@ -51,9 +51,13 @@
 
   &.phone {
     font-size: 34px;
-
+    font-weight: 500;
+    color: getColor("sub-accent");
+    line-height: 1.17;
     @media screen and(min-width:768px) {
       font-size: 12px;
+      letter-spacing: 0.02em;
+
       color: getColor("text-color");
     }
     @media screen and(min-width:1200px) {
@@ -66,6 +70,7 @@
     fill: getColor("sub-accent");
   }
 }
+
 .address__icon {
   display: none;
   @media screen and(min-width:768px) {
@@ -98,19 +103,7 @@
     height: 16px;
   }
 }
-.address__list.phone {
-  @media screen and(min-width:768px) {
-    font-size: 12px;
-    letter-spacing: 0.02em;
-    font-weight: 500;
-    color: getColor("text-color");
-  }
 
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.17;
-  color: getColor("sub-accent");
-}
 .address__contacts {
   @media screen and(min-width:768px) {
     &:not(:last-child) {

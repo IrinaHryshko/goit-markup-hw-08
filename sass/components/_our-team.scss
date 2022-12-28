@@ -1,5 +1,6 @@
 .our-team {
   background-color: getColor("bgc-section");
+  width: 100vw;
 }
 .our-team__heading {
   font-weight: 700;
@@ -18,16 +19,16 @@
   }
 }
 .our-team__item {
+  width: 100%;
   box-shadow: 0px 1px 3px getColor("focus"), 0px 1px 1px getColor("color-focus"),
     0px 2px 1px getColor("sub-focus");
   border-radius: 0px 0px 4px 4px;
   background: getColor("accent-color");
 
-  @media screen and(min-width:480px) and(max-width:767px) {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
+
   @media screen and(min-width:768px) and(max-width:1199px) {
     & {
       width: calc((100% - 30px) / 2);
@@ -52,6 +53,12 @@
     }
     &:not(:last-child) {
       margin-right: 30px;
+    }
+    &:nth-child(2n) {
+      margin-bottom: 0;
+    }
+    &:nth-child(2n + 1) {
+      margin-bottom: 0;
     }
   }
 }

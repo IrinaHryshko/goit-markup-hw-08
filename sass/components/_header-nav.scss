@@ -202,16 +202,17 @@
 }
 
 .header__soc-list {
-  @media screen and(min-width:768px) {
-    display: none;
-  }
   display: flex;
 
   margin: 0;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 0px;
   margin-right: 0;
   margin-left: 0;
+  @media screen and(min-width:768px) {
+    display: none;
+  }
 }
 .header__soc-link:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
