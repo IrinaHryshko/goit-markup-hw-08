@@ -1,15 +1,19 @@
 .address {
   margin: 0;
-
+  margin-top: auto;
+  margin-bottom: 64px;
   display: flex;
   flex-direction: column-reverse;
+
   list-style: none;
+
   &:first-child {
     margin-bottom: 32px;
   }
   @media screen and(min-width:768px) {
     display: block;
     margin-left: auto;
+    margin-top: 0;
     margin-bottom: 0px;
     padding: 0;
   }
@@ -20,10 +24,10 @@
   }
 }
 .address__list {
-  font-size: 12px;
   text-decoration: none;
   color: getColor("text-color");
-  font-size: 24px;
+
+  font-size: 20px;
   line-height: 1.17;
   transition-property: color, fill;
   transition-duration: 250ms;
@@ -33,7 +37,13 @@
     color: getColor("sub-accent");
     fill: getColor("sub-accent");
   }
+  @media screen and(min-width:480px) {
+    font-size: 24px;
+  }
   @media screen and(min-width:768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 12px;
     letter-spacing: 0.02em;
     font-weight: 500;
@@ -50,12 +60,17 @@
   }
 
   &.phone {
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 500;
+
     color: getColor("sub-accent");
     line-height: 1.17;
+    @media screen and(min-width:480px) {
+      font-size: 34px;
+    }
     @media screen and(min-width:768px) {
       font-size: 12px;
+
       letter-spacing: 0.02em;
 
       color: getColor("text-color");
@@ -74,7 +89,6 @@
 .address__icon {
   display: none;
   @media screen and(min-width:768px) {
-    display: flex;
     padding: 0;
     margin-right: 10px;
     fill: currentColor;
@@ -105,6 +119,11 @@
 }
 
 .address__contacts {
+  @media screen and(max-width:480px) {
+    &:not(:first-child) {
+      margin-bottom: 32px;
+    }
+  }
   @media screen and(min-width:768px) {
     &:not(:last-child) {
       margin-bottom: 10px;
