@@ -92,8 +92,6 @@
     padding: 0;
     margin-right: 10px;
     fill: currentColor;
-  }
-  @media screen and(min-width:1200px) {
     display: flex;
   }
 }
@@ -119,7 +117,7 @@
 }
 
 .address__contacts {
-  @media screen and(max-width:480px) {
+  @media screen and(max-width:767px) {
     &:not(:first-child) {
       margin-bottom: 32px;
     }

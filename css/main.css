@@ -534,10 +534,6 @@ img {
     padding: 0;
     margin-right: 10px;
     fill: currentColor;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .address__icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -570,7 +566,7 @@ img {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .address__contacts:not(:first-child) {
     margin-bottom: 32px;
   }
@@ -1467,6 +1463,11 @@ textarea .modal__comment::placeholder {
   line-height: 1.14;
 }
 
+@media screen and (max-width: 767px) {
+  .icon-footer {
+    padding-top: 60px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .icon-footer {
     margin-right: 0px;
